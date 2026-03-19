@@ -1,4 +1,4 @@
-<h2>Add Favorite Pokemon</h2>
+<h2>Add Gary's Favorite Pokemon</h2>
 <form  [formGroup] = "pokemonForm" (ngSubmit) = "onSubmit()" >
     <input formControlName = "name" placeholder="Name">
     <input formControlName = "type" placeholder="Type">
@@ -8,6 +8,7 @@
 </form>
 
 @for(p of pokemonService.pokemonList(); track p._id){
+    <h2>Gary’s Winning Team</h2>
     <div class="card">
         <h3>{{p.name}} (Lvl {{ p.level }})</h3>
         <p>{{p.type}} | {{p.nature}}</p>
