@@ -4,6 +4,14 @@
     <input formControlName = "type" placeholder="Type">
     <input formControlName = "level" placeholder="Level" type="number">
     <input formControlName = "nature" placeholder="Nature">
-
     <button type="submit"[disabled]="!pokemonForm.valid">Save to Database</button>
 </form>
+
+@for(p of pokemonService.pokemonList(); track p._id){
+    <div class="card">
+        <h3>{{p.name}} (Lvl {{ p.level }})</h3>
+        <p>{{p.type}} | {{p.nature}}</p>
+    </div>
+}@empty{
+    <p>No Pokemon recorded.</p>
+}

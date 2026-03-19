@@ -11,22 +11,31 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-
 const app = express();
-
 app.use(cors());//allows angular to communicate with API
-
 app.use(express.json());
+
 mongoose.connect(process.env.MONGODB_URI);
 
 app.listen(3000, ()=> {
-    console.log("Server is running on port 3000");
+    console.log('Server is running on port 3000');
 })
 
-const Pokemon = mongoose.model('Pokemon', {name: String, type:String, level:Number, nature:String});
+const Pokemon = mongoose.model('pokemon', new mongoose.Schema({
+    name: String,
+    type:String,
+    level:Number,
+    nature:String
+}));
+
 app.post('/api/pokemon', async (req, res) => {
     const pokemon = new Pokemon (req.body);
     await pokemon.save();
-    res.send(pokemon);
+    res.send(pokemon);console.log("Added new pokemon:", pokemon);
 })
+
+app.get('/api/pokemon', async (req, res) =>{
+    const pokemon = await Pokemon.find();
+    res.send(pokemon);console.log("Fetched all pokemon");
+});
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
 
 @Component({
@@ -8,5 +8,5 @@ import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'pokemon-app';
+  protected readonly title = signal ('pokemon-app');
 }

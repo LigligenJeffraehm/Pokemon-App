@@ -1,0 +1,64 @@
+/* Style the form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+p{
+text-align: center;
+  color: #333;
+}
+
+form input {
+  margin: 8px 0;
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+form button {
+  margin-top: 12px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Style the Pokémon cards */
+.card {
+  max-width: 300px;
+  margin: 15px auto;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  color: #333;
+}
+
+.card p {
+  margin: 0;
+  color: #555;
+}
