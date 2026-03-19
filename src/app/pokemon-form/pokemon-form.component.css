@@ -1,40 +1,46 @@
-/* Style the form */
+
+h2 {
+  text-align: center;
+  font-family: 'Pokemon Solid', sans-serif; 
+  color: #ffcb05;
+  text-shadow: 2px 2px #3d7dca;
+  margin: 20px 0;
+}
+
+
 form {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
-  margin: 20px auto;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #f9f9f9;
-}
-h2 {
-  text-align: center;
-  margin-top: 20px;
-  color: #333;
-}
-p{
-text-align: center;
-  color: #333;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 3px solid #3d7dca; 
+  border-radius: 12px;
+  background: #f0f8ff;
 }
 
 form input {
   margin: 8px 0;
-  padding: 8px;
-  border: 1px solid #aaa;
-  border-radius: 4px;
+  padding: 10px;
+  border: 2px solid #ffcb05; 
+  border-radius: 6px;
+  font-size: 14px;
 }
 
 form button {
   margin-top: 12px;
-  padding: 10px;
-  background-color: #4CAF50;
+  padding: 12px;
+  background-color: #ef5350; /* Pokémon red */
   color: white;
   font-weight: bold;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: transform 0.2s;
+}
+
+form button:hover {
+  transform: scale(1.05);
 }
 
 form button:disabled {
@@ -42,23 +48,29 @@ form button:disabled {
   cursor: not-allowed;
 }
 
-/* Style the Pokémon cards */
+
 .card {
   max-width: 300px;
   margin: 15px auto;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  padding: 15px;
+  border: 3px solid #3d7dca;
+  border-radius: 10px;
   background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 4px 4px #ffcb05;
+  text-align: center;
 }
 
 .card h3 {
   margin: 0 0 8px;
-  color: #333;
+  color: #ef5350; 
 }
 
 .card p {
   margin: 0;
-  color: #555;
+  color: #333;
+}
+h3 {
+  text-align: center;
+    margin: 0 0 8px;
+  color: #ef5350; 
 }
